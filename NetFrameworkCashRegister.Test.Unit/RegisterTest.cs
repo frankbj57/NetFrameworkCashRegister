@@ -44,6 +44,14 @@ namespace NetFrameworkCashRegister.Test.Unit
         }
 
         [Test]
+        public void Add_Add2Item_NumberCorrect()
+        {
+            uut.AddItem(11.22);
+            uut.AddItem(33.33);
+            Assert.That(uut.NoOfItems, Is.EqualTo(2));
+        }
+
+        [Test]
         public void Add_NegativeItem_Throws()
         {
             Assert.That(() => uut.AddItem(-23.56), Throws.ArgumentException.With.Property("Message").EqualTo("Negativ item værdi"));
