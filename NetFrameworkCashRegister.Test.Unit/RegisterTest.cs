@@ -39,7 +39,7 @@ namespace NetFrameworkCashRegister.Test.Unit
         [Test]
         public void Add_AddItem_TotalCorrect()
         {
-            uut.AddItem(11.33);
+            uut.AddItem(11.22);
             Assert.That(uut.GetTotal(), Is.EqualTo(11.22));
         }
 
